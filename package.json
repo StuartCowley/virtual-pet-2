@@ -1,0 +1,14 @@
+{
+  "name": "virtual-pet",
+  "version": "1.0.0",
+  "description": "MCR Codes exercise for OOP",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Shaun Emery",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.3"
+  }
+}
