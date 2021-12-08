@@ -2,9 +2,14 @@ const Pet = require('../src/pet');
 
 describe('constructor', () => {
     it('returns an object', () => {
-      expect(new Pet('Fido')).toBeInstanceOf(Object);
+        expect(new Pet('Fido')).toBeInstanceOf(Object);
     });
-    it('sets pet name to Fido', () => {
-      expect(new Pet('Fido')).toEqual({name: 'Fido'});
+    it('sets pet name to parameter name', () => {
+        const pet = new Pet('Fido');
+        expect(pet.name).toEqual('Fido');
+    });
+    it('sets inital age to 0', () => {
+        const pet = new Pet('Fido');
+        expect(pet.age).toEqual(0);
     });
   });
