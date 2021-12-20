@@ -124,3 +124,26 @@ describe('isAlive', () => {
 		expect(pet.isAlive).toEqual(true);
 	});
 });
+
+describe('adopt a child', () => {
+	it('children property is type object', () => {
+		let child = new Pet('Amelia');
+		pet.adoptChild(child);
+		expect(typeof pet.children).toEqual('object');
+	});
+	it('check first element of array equals child', () => {
+		let child = new Pet('Amelia');
+		pet.adoptChild(child);
+		expect(pet.children[0].name).toEqual('Amelia');
+	});
+});
+describe('have a child', () => {
+	it('children property is type object', () => {
+		pet.haveaChild('Amelia');
+		expect(typeof pet.children).toEqual('object');
+	});
+	it('check first element of array equals Amelia', () => {
+		pet.haveaChild('Amelia');
+		expect(pet.children[0].name).toEqual('Amelia');
+	});
+});
